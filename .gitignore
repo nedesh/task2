@@ -1,3 +1,6 @@
 *.iml
+*.xml
 .idea
+.resources
+.test.java
 /out
