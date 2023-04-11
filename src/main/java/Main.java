@@ -33,16 +33,16 @@ public class Main {
 //        Comparator<Data> maxWater = Comparator.comparingInt(Data::getWaterCount);
 //        System.out.println(dataList.stream().max(maxWater));
 
-        List<Data> waterCount = Filter.waterCount(dataList);
+        List<Data> waterCount = Filter.filterDataByWater(dataList);
         for (Data data : waterCount) {
             System.out.printf("Больше всего воды потребляет: %s - %s\n", data.getName(), data.getWaterCount());
         }
-        List<Data> gasCount1 = Filter.gasCount1(dataList);
-        for (Data data : gasCount1) {
+        List<Data> gasCount = Filter.filterDataByGas(dataList);
+        for (Data data : gasCount) {
             System.out.printf("Больше всего газа потребляет: %s - %s\n", data.getName(), data.getGasCount1());
         }
-        List<Data> electroCount1 = Filter.electroCount1(dataList);
-        for (Data data : electroCount1) {
+        List<Data> electroCount = Filter.filterDataByElecto(dataList);
+        for (Data data : electroCount) {
             System.out.printf("Больше всего электричества потребляет: %s - %s\n", data.getName(), data.getElectroCount1());
         }
 

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class Filter {
-    public static List<Data> waterCount(List<Data> counts) {
+    public static List<Data> filterDataByWater(List<Data> counts) {
         List<Data> result = new ArrayList<>();
         int maxWaterCount = 0;
         for (Data count : counts) {
@@ -22,7 +22,7 @@ public class Filter {
 
     }
 
-    public static List<Data> gasCount1(List<Data> counts) {
+    public static List<Data> filterDataByGas(List<Data> counts) {
         List<Data> result = new ArrayList<>();
         int maxGasCount1 = 0;
         for (Data count : counts) {
@@ -38,23 +38,23 @@ public class Filter {
         return result;
     }
 
-    public static List<Data> gasCount2(List<Data> counts) {
-        List<Data> result = new ArrayList<>();
-        int maxGasCount2 = 0;
-        for (Data count : counts) {
-            int GasCount2 = count.getGasCount2();
-            if (GasCount2 > maxGasCount2) {
-                maxGasCount2 = GasCount2;
-                result.clear();
-                result.add(count);
-            } else if (GasCount2 == maxGasCount2) {
-                result.add(count);
-            }
-        }
-        return result;
-    }
+//    public static List<Data> gasCount2(List<Data> counts) {
+//        List<Data> result = new ArrayList<>();
+//        int maxGasCount2 = 0;
+//        for (Data count : counts) {
+//            int GasCount2 = count.getGasCount2();
+//            if (GasCount2 > maxGasCount2) {
+//                maxGasCount2 = GasCount2;
+//                result.clear();
+//                result.add(count);
+//            } else if (GasCount2 == maxGasCount2) {
+//                result.add(count);
+//            }
+//        }
+//        return result;
+//    }
 
-    public static List<Data> electroCount1(List<Data> counts) {
+    public static List<Data> filterDataByElecto(List<Data> counts) {
         List<Data> result = new ArrayList<>();
         int maxElectroCount1 = 0;
         for (Data count : counts) {
@@ -70,21 +70,21 @@ public class Filter {
         return result;
     }
 
-    public static List<Data> electroCount2(List<Data> counts) {
-        List<Data> result = new ArrayList<>();
-        int maxElectroCount2 = 0;
-        for (Data count : counts) {
-            int electroCount2 = count.getElectroCount2();
-            if (electroCount2 > maxElectroCount2) {
-                maxElectroCount2 = electroCount2;
-                result.clear();
-                result.add(count);
-            } else if (electroCount2 == maxElectroCount2) {
-                result.add(count);
-            }
-        }
-        return result;
-    }
+//    public static List<Data> electroCount2(List<Data> counts) {
+//        List<Data> result = new ArrayList<>();
+//        int maxElectroCount2 = 0;
+//        for (Data count : counts) {
+//            int electroCount2 = count.getElectroCount2();
+//            if (electroCount2 > maxElectroCount2) {
+//                maxElectroCount2 = electroCount2;
+//                result.clear();
+//                result.add(count);
+//            } else if (electroCount2 == maxElectroCount2) {
+//                result.add(count);
+//            }
+//        }
+//        return result;
+//    }
 
     //    public static List<Data> excessMetricsElectro(List<Data> counts) {
 //        List<Data> result = new ArrayList<>();
